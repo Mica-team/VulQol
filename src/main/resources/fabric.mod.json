@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "vulqol",
+	"version": "${version}",
+	"name": "vulqol",
+	"description": "Minecraft Mod that bring some of your favourite tool for vulkanmod",
+	"authors": [
+		"Mica team (Gamerofpro)"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/vulqol/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.vulqol.Vulqol"
+		],
+		"client": [
+			"com.vulqol.client.VulqolClient"
+		],
+		"fabric-datagen": [
+			"com.vulqol.client.VulqolDataGenerator"
+		]
+	},
+	"mixins": [
+		"vulqol.mixins.json",
+		{
+			"config": "vulqol.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
